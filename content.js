@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(
       // Export
       setTimeout(
         function() {
-          $("div.bp3-popover-content .bp3-menu-item > div:contains('Export')").click();
+          $("div.bp3-popover-content li:nth-child(6) .bp3-menu-item > div:contains('Export')").click();
         },
         1000
       );
