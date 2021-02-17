@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Roam Export",
+  "version": "0.2.7",
+
+  "commands": {
+    "perform_export": {
+      "suggested_key": {
+        "default": "Alt+Shift+E"
+      },
+      "description": "Exports the current Roam page as JSON."
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://roamresearch.com/*"
+      ],
+      "js": ["jquery-3.5.1.min.js", "content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js", "hot-reload.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
